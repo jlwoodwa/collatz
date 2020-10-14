@@ -1,0 +1,27 @@
+cabal-version:      3.0
+name:               collatz
+version:            0.1.0.0
+synopsis:           Collatz conjecture benchmark
+license:            GPL-3.0-only
+license-file:       LICENSE
+author:             June Woodward
+maintainer:         jlwoodwa@caltech.edu
+extra-source-files: CHANGELOG.md
+
+library
+  exposed-modules:  Collatz
+  build-depends:    base ^>=4.14.1.0
+  hs-source-dirs:   src
+  default-language: Haskell2010
+
+executable collatz
+  main-is:          Main.hs
+  build-depends:
+    , base     ^>=4.14.1.0
+    , collatz
+    , deepseq  ^>=1.4.4.0
+    , random   ^>=1.2.0
+    , time     ^>=1.9.3
+
+  hs-source-dirs:   app
+  default-language: Haskell2010
